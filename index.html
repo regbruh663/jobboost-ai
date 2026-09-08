@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>JobBoost AI — Free Job Application Toolkit</title>
+  <meta name="description" content="Free job application toolkit for resumes, cover letters and interview prep.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <div class="wrap nav">
+    <div class="brand">⚡ JobBoost AI</div>
+    <a href="#tool">Use it free</a>
+  </div>
+</header>
+
+<main>
+<section class="hero">
+  <div class="wrap">
+    <span class="pill">100% free MVP • No API key required</span>
+    <h1>Turn a job posting into a stronger application.</h1>
+    <p>Paste a job description and your experience. Get tailored resume bullets, a cover letter, and interview prep instantly.</p>
+    <a class="cta" href="#tool">Start free</a>
+  </div>
+</section>
+
+<section id="tool" class="wrap card">
+  <h2>1. Add the job</h2>
+  <label>Job title <input id="title" placeholder="e.g. Customer Service Representative"></label>
+  <label>Job description <textarea id="job" rows="8" placeholder="Paste the job posting here..."></textarea></label>
+
+  <h2>2. Add your experience</h2>
+  <label>Your experience / skills <textarea id="experience" rows="7" placeholder="Example: 2 years retail, handled 40+ customers/day, trained new employees, Excel, cash handling..."></textarea></label>
+
+  <div class="buttons">
+    <button onclick="generate()">Generate my application kit</button>
+    <button class="secondary" onclick="clearAll()">Clear</button>
+  </div>
+
+  <div id="results" class="results hidden">
+    <div class="result">
+      <div class="result-head"><h3>Resume bullets</h3><button onclick="copyText('bullets')">Copy</button></div>
+      <pre id="bullets"></pre>
+    </div>
+    <div class="result">
+      <div class="result-head"><h3>Cover letter</h3><button onclick="copyText('cover')">Copy</button></div>
+      <pre id="cover"></pre>
+    </div>
+    <div class="result">
+      <div class="result-head"><h3>Interview prep</h3><button onclick="copyText('interview')">Copy</button></div>
+      <pre id="interview"></pre>
+    </div>
+  </div>
+</section>
+
+<section class="wrap money">
+  <h2>How this can make money</h2>
+  <div class="grid">
+    <div><b>1. Free traffic</b><p>Publish the tool on GitHub Pages and share useful job-search content on TikTok, Reddit, LinkedIn and Facebook.</p></div>
+    <div><b>2. Affiliate offers</b><p>Add legitimate job-board, resume-service, course or career-tool affiliate links after you have traffic.</p></div>
+    <div><b>3. Paid upgrade</b><p>Later add a $5–$15 premium application package or resume review. Keep the basic generator free.</p></div>
+  </div>
+  <p class="note"><strong>Important:</strong> no website can honestly guarantee instant income. This version is free to host and gives users an instant result; money comes from traffic and conversions.</p>
+</section>
+</main>
+
+<footer><div class="wrap">JobBoost AI • Free career toolkit</div></footer>
+<script src="app.js"></script>
+</body>
+</html>
